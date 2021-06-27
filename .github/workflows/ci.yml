@@ -41,22 +41,13 @@ jobs:
             ${{ runner.os }}-pods-${{ env.cache-name }}-
             ${{ runner.os }}-pods-
             ${{ runner.os }}-
-      - name: Get flutter dependencies.
-        run: |
-          make setup
-          export PATH="$PATH":"$HOME/.pub-cache/bin"
-          make dependencies
       - name: Check for any formatting and statically analyze the code.
         run: make format-analyze
-
       - name: Run widget tests for our flutter project.
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
           make unit-test
           make codecov
-      - name: Build ipa and apk
-        run: |
-          make build-android-prd
-          make build-ios-prd
+
      
