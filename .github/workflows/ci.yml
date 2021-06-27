@@ -53,16 +53,11 @@ jobs:
     name: Build Flutter (Web)
     runs-on: macos-latest
     steps:
-      - run: flutter build web
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
           name: web-build
           path: build/web
-      - name: Download Artifact
-        uses: actions/download-artifact@master
-        with:
-          name: web-build 
       - name: Display structure of build files
         run: ls -R
         working-directory: ./web
