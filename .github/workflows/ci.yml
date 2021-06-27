@@ -52,10 +52,14 @@ jobs:
       - run: flutter build appbundle
       
   add_reviewer:
-    name: Add Pull Request Reviewer
+    name: Add Reviewer
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: uesteibar/reviewer-lottery@v1
+    - name: Add Reviewers
+      uses: madrapps/add-reviewers@v1
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        reviewers: champ96k
+        re-request-when-approved: true
+        re-request-when-changes-requested: true
+
