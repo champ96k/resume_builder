@@ -49,6 +49,10 @@ jobs:
       - run: flutter clean
       - run: flutter build appbundle
 
+  build_web:
+    name: Build Flutter (Web)
+    runs-on: macos-latest
+    steps:
       - run: flutter build web
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
