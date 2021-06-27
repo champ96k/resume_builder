@@ -7,7 +7,7 @@ on:
 
 jobs: 
   flutter_test:
-    name: Run flutter analyze and assign reviewer
+    name: Run flutter analyze
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,16 +17,20 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: "stable"
+      - run: flutter pub get
+      - run: flutter analyze
+
+  test:
+    name: Add Reviewers
+    runs-on: macos-latest
+    steps:
       - uses: madrapps/add-reviewers@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          reviewers: champ96k
+          reviewers: john,kramer,seinfeld
           re-request-when-approved: true
           re-request-when-changes-requested: true
-      - run: flutter pub get
-      - run: flutter analyze
       
-
   build_ios:
     name: Build Flutter (iOS)
     runs-on: macos-latest
