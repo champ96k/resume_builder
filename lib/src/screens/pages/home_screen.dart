@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             ///Stand out with resume `BuildHeader`
             const BuildHeader(),
 
-            ///Resume Templates `Build templates`
+            ///Resume Template `Build templates`
             const BuildTemplate(),
 
             //show Templates
