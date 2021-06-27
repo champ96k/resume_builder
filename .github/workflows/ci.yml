@@ -1,18 +1,62 @@
-- name: Analyze Dart
-  uses: zgosalvez/github-actions-analyze-dart@v1.5.2
+name: Flutter CI
 
-- name: Flutter action
-  uses: subosito/flutter-action@v1.5.3
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-- name: Flutter Mate
-  uses: Techno-Disaster/Flutter-Mate@v1.0.0
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
 
-- name: Flutter Package Updater
-  uses: tianhaoz95/update-flutter-packages@v0.0.5
+      - name: Cache Gradle modules
+        uses: actions/cache@v2.1.6
+        env:
+          cache-number: ${{ secrets.CACHE_NUMBER }}
+        with:
+          path: |
+            ~/android/.gradle
+            ~/.gradle/cache
+            # ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ env.cache-number }}-${{ hashFiles('android/build.gradle') }}-${{ hashFiles('android/app/build.gradle') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-${{ env.cache-name }}-${{ hashFiles('android/build.gradle') }}
+            ${{ runner.os }}-gradle-${{ env.cache-name }}-
+            ${{ runner.os }}-gradle-
+            ${{ runner.os }}-
+      - name: Cache CocoaPods modules
+        uses: actions/cache@v2.1.6
+        env:
+          cache-number: ${{ secrets.CACHE_NUMBER }}
+        with:
+          path: Pods
+          key: ${{ runner.os }}-pods-${{ env.cache-number }}-${{ hashFiles('ios/Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-${{ env.cache-name }}-
+            ${{ runner.os }}-pods-
+            ${{ runner.os }}-
+      - name: Get flutter dependencies.
+        run: |
+          make setup
+          export PATH="$PATH":"$HOME/.pub-cache/bin"
+          make dependencies
+      - name: Check for any formatting and statically analyze the code.
+        run: make format-analyze
 
-- name: Dart/Flutter Package Analyzer
-  uses: axel-op/dart-package-analyzer@v3
-
-- name: Flutter Pubspec Updater
-  uses: kuanyi-ng/update-flutter-packages@v0.1.1
-
+      - name: Run widget tests for our flutter project.
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: |
+          make unit-test
+          make codecov
+      - name: Build ipa and apk
+        run: |
+          make build-android-prd
+          make build-ios-prd
+     
