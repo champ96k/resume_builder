@@ -10,51 +10,12 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2.3.4
-      - uses: dart-lang/setup-dart@v1
-        with:
-          sdk: stable
-
-      - name: Cache Gradle modules
-        uses: actions/cache@v2.1.6
-        env:
-          cache-number: ${{ secrets.CACHE_NUMBER }}
-        with:
-          path: |
-            ~/android/.gradle
-            ~/.gradle/cache
-            # ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ env.cache-number }}-${{ hashFiles('android/build.gradle') }}-${{ hashFiles('android/app/build.gradle') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-${{ env.cache-name }}-${{ hashFiles('android/build.gradle') }}
-            ${{ runner.os }}-gradle-${{ env.cache-name }}-
-            ${{ runner.os }}-gradle-
-            ${{ runner.os }}-
-      - name: Cache CocoaPods modules
-        uses: actions/cache@v2.1.6
-        env:
-          cache-number: ${{ secrets.CACHE_NUMBER }}
-        with:
-          path: Pods
-          key: ${{ runner.os }}-pods-${{ env.cache-number }}-${{ hashFiles('ios/Podfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-pods-${{ env.cache-name }}-
-            ${{ runner.os }}-pods-
-            ${{ runner.os }}-
-      - name: Check for any formatting and statically analyze the code.
-        run: make format-analyze
-      - name: Flutter Runner
-        uses: jddeep/Flutter-Runner@1.2.0
-      - name: Flutter test & compile
-        uses: emiliodallatorre/flutter-action@
-      - name: Get Flutter Version
-        uses: its404/get-flutter-version@v1.0.0
-      - name: Flutter Pubspec Updater
-        uses: kuanyi-ng/update-flutter-packages@v0.1.1
-      - name: Analyze Dart
-        uses: zgosalvez/github-actions-analyze-dart@v1.5.2
-
-
-
-
-     
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '12.x'
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '2.0.5'
+    - run: flutter pub get
+    - run: flutter test
