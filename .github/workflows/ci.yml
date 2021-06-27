@@ -1,6 +1,7 @@
 name: CI
 on:
   pull_request:
+    types: [opened, ready_for_review, reopened]
     branches:
       - main
 
@@ -52,7 +53,9 @@ jobs:
       
   add_reviewer:
     name: Add Pull Request Reviewer
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Reviewer lottery
-        uses: uesteibar/reviewer-lottery@v1.1.0
+      - uses: actions/checkout@v1
+      - uses: uesteibar/reviewer-lottery@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
