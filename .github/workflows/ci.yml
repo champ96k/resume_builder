@@ -55,7 +55,7 @@ jobs:
     name: Add Pull Request Reviewer
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: uesteibar/reviewer-lottery@v1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v1
+    - uses: uesteibar/reviewer-lottery@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
