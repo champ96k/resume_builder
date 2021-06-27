@@ -33,6 +33,7 @@ jobs:
       - run: flutter pub get
       - run: flutter clean
       - run: flutter build ios --release --no-codesign
+      - run: dart format .
 
   build_appbundle:
     name: Build Flutter (Android)
@@ -50,7 +51,7 @@ jobs:
       - run: flutter build appbundle
 
   build_web:
-    name: Build Flutter (Web)
+    name: Flutter code format (Web)
     runs-on: macos-latest
     steps:
       - name: Archive Production Artifact
@@ -58,6 +59,5 @@ jobs:
         with:
           name: web-build
           path: build/web
-      - name: Display structure of build files
-        run: ls -R
-        working-directory: ./web
+      - name: flutter build web
+        run: flutter build web
