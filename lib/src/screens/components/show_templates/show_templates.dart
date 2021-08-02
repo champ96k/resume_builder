@@ -5,34 +5,38 @@ class ShowTemplates extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constarints) {
-        return GridView.builder(
-          shrinkWrap: true,
-          itemCount: 22,
-          physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: constarints.maxWidth >= 1200
-                ? 4
-                : (constarints.maxWidth >= 767 && constarints.maxWidth < 1200)
-                    ? 3
-                    : 1,
-            childAspectRatio: 4 / 5,
-            crossAxisSpacing: 8.0,
-            mainAxisSpacing: 8.0,
-          ),
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 30,
-                width: 30,
-                color: Colors.brown,
-              ),
-            );
-          },
-        );
-      },
+    final _size = MediaQuery.of(context).size;
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: _size.width * 0.05),
+      child: LayoutBuilder(
+        builder: (context, constarints) {
+          return GridView.builder(
+            shrinkWrap: true,
+            itemCount: 5,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: constarints.maxWidth >= 1200
+                  ? 4
+                  : (constarints.maxWidth >= 767 && constarints.maxWidth < 1200)
+                      ? 3
+                      : 1,
+              childAspectRatio: 4 / 5,
+              crossAxisSpacing: 8.0,
+              mainAxisSpacing: 8.0,
+            ),
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 30,
+                  width: 30,
+                  color: Colors.brown,
+                ),
+              );
+            },
+          );
+        },
+      ),
     );
   }
 }

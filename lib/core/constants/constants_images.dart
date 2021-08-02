@@ -1,4 +1,4 @@
 class ConstantImages {
-  //static const primaryLogo = "assets/logo_png.png";
-
+  static const bannerImage = "images/banner.webp";
+  static const coverImage1 = "images/coverImage1.webp";
 }

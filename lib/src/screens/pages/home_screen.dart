@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import '../components/app_bar/top_appbar.dart';
 import '../components/build_header/build_header.dart';
-import '../components/build_templates/build_template.dart';
+import '../components/build_templates/build_helper_body.dart';
+import '../components/build_templates/build_templates_title.dart';
 import '../components/footer/footer.dart';
 import '../components/show_templates/show_templates.dart';
 
@@ -18,11 +20,13 @@ class HomeScreen extends StatelessWidget {
             //Appbar
             const TopAppBar(),
 
-            ///Stand out with resume `BuildHeader`
+            ///cover screen
             const BuildHeader(),
 
-            ///Resume Template `Build templates`
-            const BuildTemplate(),
+            ///Resume helper
+            const BuildHelperBody(),
+
+            const BuildTemplatesTitle(),
 
             //show Templates
             const ShowTemplates(),
