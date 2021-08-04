@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../../core/constants/constants_images.dart';
 
 class BuildTemplatesTitle extends StatelessWidget {
   const BuildTemplatesTitle({Key? key}) : super(key: key);

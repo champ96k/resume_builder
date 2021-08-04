@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resume_builder/core/constants/constant_colors.dart';
 import '../../../../core/theme/style.dart';
 
 class TopAppBar extends StatelessWidget {
@@ -26,14 +27,29 @@ class TopAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           SizedBox(width: _constSpacing),
-          const Text("Free resume builder"),
+          InkWell(
+            hoverColor: ConstantColors.primaryIndigo,
+            onTap: () {},
+            child: const Text("Free resume builder"),
+          ),
           const Spacer(),
           SizedBox(width: _constSpacing),
-          const Text("Home"),
+          InkWell(
+            onTap: () {},
+            child: const Text("Home"),
+          ),
           SizedBox(width: _constSpacing),
-          const Text("Templates"),
+          InkWell(
+            hoverColor: ConstantColors.primaryIndigo,
+            onTap: () {},
+            child: const Text("Templates"),
+          ),
           SizedBox(width: _constSpacing),
-          const Text("About Us"),
+          InkWell(
+            hoverColor: ConstantColors.primaryIndigo,
+            onTap: () {},
+            child: const Text("About Us"),
+          ),
           SizedBox(width: _constSpacing),
           OutlinedButton(
             style: ThemeStyle.outlineButtonStyle,

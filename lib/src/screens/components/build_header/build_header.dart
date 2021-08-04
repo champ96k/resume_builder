@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import '../../../../core/constants/constant_colors.dart';
+
 import '../../../../core/constants/constants_images.dart';
-import '../../../../core/theme/style.dart';
+import '../../../widgets/primary_button.dart';
 
 class BuildHeader extends StatelessWidget {
   const BuildHeader({Key? key}) : super(key: key);
@@ -14,6 +16,7 @@ class BuildHeader extends StatelessWidget {
       height: size.height * 0.9,
       width: size.width,
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
             child: Container(
@@ -33,15 +36,29 @@ class BuildHeader extends StatelessWidget {
                   Text(
                     """Create your resume easily with our free builder\nand professional templates""",
                     style: _textTheme.headline6!.copyWith(
-                      color: Colors.black54,
-                      fontWeight: FontWeight.w600,
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w500,
+                      letterSpacing: 0.75,
                     ),
                   ),
-                  SizedBox(height: _constSpacing),
-                  OutlinedButton(
-                    style: ThemeStyle.outlineButtonStyle,
-                    onPressed: () {},
-                    child: const Text("Create New Resume"),
+                  SizedBox(height: _constSpacing / 0.4),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      PrimaryButton(
+                        width: size.width * 0.12,
+                        title: "Get Started",
+                        onTap: () {},
+                      ),
+                      SizedBox(width: size.width * 0.03),
+                      PrimaryButton(
+                        title: "Create New Resume",
+                        onTap: () {},
+                        backgroundColor: Colors.transparent,
+                        borderColor: ConstantColors.primaryIndigo,
+                        textColor: ConstantColors.primaryIndigo,
+                      ),
+                    ],
                   ),
                 ],
               ),
