@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:resume_builder/core/constants/constant_colors.dart';
+import '../../../../core/constants/constant_colors.dart';
 import '../../../../core/theme/style.dart';
 
 class TopAppBar extends StatelessWidget {

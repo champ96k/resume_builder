@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:resume_builder/src/widgets/primary_button.dart';
+
 import '../../../../core/constants/constant_colors.dart';
+import '../../../widgets/primary_button.dart';
 
 class BuildBrandingTile extends StatelessWidget {
   const BuildBrandingTile({Key? key}) : super(key: key);
