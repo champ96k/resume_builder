@@ -10,13 +10,6 @@ analyzer:
     missing_required_param: warning
     # treat missing returns as a warning (not a hint)
     missing_return: warning
-    
-    #custom rule
-    avoid_catches_without_on_clauses: ignore
-    avoid_equals_and_hash_code_on_mutable_classes: ignore
-    dead_code: ignore
-    omit_local_variable_types: ignore
-   
 
 linter:
   rules:

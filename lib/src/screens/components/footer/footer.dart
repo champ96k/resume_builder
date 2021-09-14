@@ -9,7 +9,7 @@ class Footer extends StatelessWidget {
     final _textTheme = Theme.of(context).textTheme;
     // final constPadding = EdgeInsets.symmetric(horizontal: size.width * 0.04);
     return Container(
-      height: _size.height * 0.4,
+      height: _size.height * 0.14,
       width: _size.width,
       alignment: Alignment.center,
       color: Colors.black,
@@ -17,49 +17,68 @@ class Footer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Expanded(
-            flex: 2,
-            child: Column(
-              children: [
-                Text(
-                  "Container resume resume ",
-                  style: _textTheme.bodyText2!.copyWith(
-                    color: Colors.white,
-                  ),
-                ),
-                Text(
-                  "Container resume resume ",
-                  style: _textTheme.bodyText2!.copyWith(
-                    color: Colors.white,
-                  ),
-                ),
-                Text(
-                  "Container resume resume ",
-                  style: _textTheme.bodyText2!.copyWith(
-                    color: Colors.white,
-                  ),
-                ),
-                Text(
-                  "Container resume resume ",
-                  style: _textTheme.bodyText2!.copyWith(
-                    color: Colors.white,
-                  ),
-                ),
-              ],
+          footerBuilder(
+            size: _size,
+            textTheme: _textTheme,
+            title: "title",
+            subTitle: ['Jjje', 'hhehhe', 'Jjje', 'hhehhe'],
+          ),
+          footerBuilder(
+            size: _size,
+            textTheme: _textTheme,
+            title: "title",
+            subTitle: ['Jjje', 'hhehhe', 'Jjje', 'hhehhe'],
+          ),
+          footerBuilder(
+            size: _size,
+            textTheme: _textTheme,
+            title: "title",
+            subTitle: ['Jjje', 'hhehhe', 'Jjje', 'hhehhe'],
+          ),
+          footerBuilder(
+            size: _size,
+            textTheme: _textTheme,
+            title: "title",
+            subTitle: ['Jjje', 'hhehhe', 'Jjje', 'hhehhe'],
+          ),
+          footerBuilder(
+            size: _size,
+            textTheme: _textTheme,
+            title: "title",
+            subTitle: ['Jjje', 'hhehhe', 'Jjje', 'hhehhe'],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget footerBuilder({
+    required Size size,
+    required TextTheme textTheme,
+    required String title,
+    required List<String> subTitle,
+  }) {
+    return Expanded(
+      flex: 2,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(height: size.height * 0.01),
+          Text(
+            "OUR COMPANY",
+            style: textTheme.bodyText2!.copyWith(
+              color: Colors.white60,
+              letterSpacing: 3.75,
             ),
           ),
-          Expanded(
-            flex: 2,
-            child: Container(),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(),
-          ),
+          ...List.generate(subTitle.length, (index) {
+            return Text(
+              subTitle[index],
+              style: textTheme.caption!.copyWith(
+                color: Colors.white,
+              ),
+            );
+          }),
         ],
       ),
     );
