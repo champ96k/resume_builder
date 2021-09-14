@@ -33,19 +33,45 @@ class Footer extends StatelessWidget {
             size: _size,
             textTheme: _textTheme,
             title: "title",
-            subTitle: ['Jjje', 'hhehhe', 'Jjje', 'hhehhe'],
+            subTitle: [
+              'titletitletitle',
+              'title title title',
+              'titletitl etitle etitle',
+              'titletit letitle'
+            ],
           ),
           footerBuilder(
             size: _size,
             textTheme: _textTheme,
             title: "title",
-            subTitle: ['Jjje', 'hhehhe', 'Jjje', 'hhehhe'],
+            subTitle: [
+              'titletitletitle',
+              'title title title',
+              'titletitl etitle etitle',
+              'titletit letitle'
+            ],
           ),
           footerBuilder(
             size: _size,
             textTheme: _textTheme,
             title: "title",
-            subTitle: ['Jjje', 'hhehhe', 'Jjje', 'hhehhe'],
+            subTitle: [
+              'titleti tletitle tletitle tletitle',
+              'title title title',
+              'titletitl etitle etitle',
+              'titletit letitle'
+            ],
+          ),
+          footerBuilder(
+            size: _size,
+            textTheme: _textTheme,
+            title: "title",
+            subTitle: [
+              'titleti tletitle tletitle tletitle',
+              'title title title',
+              'titletitl etitle etitle',
+              'titletit letitle'
+            ],
           ),
         ],
       ),
@@ -76,6 +102,7 @@ class Footer extends StatelessWidget {
               subTitle[index],
               style: textTheme.caption!.copyWith(
                 color: Colors.white,
+                letterSpacing: 0.75,
               ),
             );
           }),
