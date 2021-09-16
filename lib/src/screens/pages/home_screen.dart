@@ -9,7 +9,7 @@ import '../components/cover_builder/left_cover_builder.dart';
 import '../components/cover_builder/right_cover_builder.dart';
 import '../components/footer/footer.dart';
 import '../components/show_templates/show_templates.dart';
-import '../components/why_buildMy_resume/why_build_my_resume.dart';
+import '../components/why_build_my_resume/why_build_my_resume.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

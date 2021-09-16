@@ -7,107 +7,54 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     final _size = MediaQuery.of(context).size;
     final _textTheme = Theme.of(context).textTheme;
-    // final constPadding = EdgeInsets.symmetric(horizontal: size.width * 0.04);
     return Container(
-      height: _size.height * 0.14,
+      height: _size.height * 0.1,
       width: _size.width,
       alignment: Alignment.center,
+      padding: EdgeInsets.symmetric(horizontal: _size.width * 0.1),
       color: Colors.black,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          footerBuilder(
-            size: _size,
-            textTheme: _textTheme,
-            title: "title",
-            subTitle: ['Jjje', 'hhehhe', 'Jjje', 'hhehhe'],
+          Text(
+            "Copyrights © 2021 All Rights Reserved by Tushar Nikam.",
+            style: _textTheme.bodyText1!.copyWith(
+              color: Colors.white60,
+              letterSpacing: 0.75,
+            ),
           ),
-          footerBuilder(
-            size: _size,
-            textTheme: _textTheme,
-            title: "title",
-            subTitle: ['Jjje', 'hhehhe', 'Jjje', 'hhehhe'],
-          ),
-          footerBuilder(
-            size: _size,
-            textTheme: _textTheme,
-            title: "title",
-            subTitle: [
-              'titletitletitle',
-              'title title title',
-              'titletitl etitle etitle',
-              'titletit letitle'
-            ],
-          ),
-          footerBuilder(
-            size: _size,
-            textTheme: _textTheme,
-            title: "title",
-            subTitle: [
-              'titletitletitle',
-              'title title title',
-              'titletitl etitle etitle',
-              'titletit letitle'
-            ],
-          ),
-          footerBuilder(
-            size: _size,
-            textTheme: _textTheme,
-            title: "title",
-            subTitle: [
-              'titleti tletitle tletitle tletitle',
-              'title title title',
-              'titletitl etitle etitle',
-              'titletit letitle'
-            ],
-          ),
-          footerBuilder(
-            size: _size,
-            textTheme: _textTheme,
-            title: "title",
-            subTitle: [
-              'titleti tletitle tletitle tletitle',
-              'title title title',
-              'titletitl etitle etitle',
-              'titletit letitle'
-            ],
-          ),
+          const Spacer(),
+          _footerTextBuilder(_textTheme, _size, title: 'Twitter'),
+          _footerTextBuilder(_textTheme, _size, title: 'Send Us a Mail'),
+          _footerTextBuilder(_textTheme, _size, title: 'Privacy Policy'),
+          _footerTextBuilder(_textTheme, _size, title: 'About Us'),
+          _footerTextBuilder(_textTheme, _size, title: 'Affiliate'),
         ],
       ),
     );
   }
 
-  Widget footerBuilder({
-    required Size size,
-    required TextTheme textTheme,
+  Widget _footerTextBuilder(
+    TextTheme _textTheme,
+    Size _size, {
     required String title,
-    required List<String> subTitle,
   }) {
-    return Expanded(
-      flex: 2,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(height: size.height * 0.01),
-          Text(
-            "OUR COMPANY",
-            style: textTheme.bodyText2!.copyWith(
+    return Row(
+      children: [
+        SizedBox(width: _size.width * 0.015),
+        InkWell(
+          hoverColor: Colors.red,
+          focusColor: Colors.red,
+          onTap: () {},
+          child: Text(
+            title,
+            style: _textTheme.bodyText1!.copyWith(
               color: Colors.white60,
-              letterSpacing: 3.75,
+              letterSpacing: 1.75,
             ),
           ),
-          ...List.generate(subTitle.length, (index) {
-            return Text(
-              subTitle[index],
-              style: textTheme.caption!.copyWith(
-                color: Colors.white,
-                letterSpacing: 0.75,
-              ),
-            );
-          }),
-        ],
-      ),
+        ),
+        SizedBox(width: _size.width * 0.015),
+      ],
     );
   }
 }

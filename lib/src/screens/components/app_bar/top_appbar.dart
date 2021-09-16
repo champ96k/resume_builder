@@ -52,7 +52,7 @@ class TopAppBar extends StatelessWidget {
           ),
           SizedBox(width: _constSpacing),
           OutlinedButton(
-            style: ThemeStyle.outlineButtonStyle,
+            style: outlineButtonStyle,
             onPressed: () {},
             child: const Text("Create New Resume"),
           ),
