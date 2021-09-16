@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'core/app_configs/routes_generator.dart';
 import 'core/app_configs/service_locator.dart';
 import 'src/screens/pages/home_screen.dart';
 
@@ -17,7 +16,6 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      onGenerateRoute: RouteGenerator.generate,
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
