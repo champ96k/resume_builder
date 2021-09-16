@@ -21,6 +21,7 @@ class ImageBuilder extends StatelessWidget {
     final _size = MediaQuery.of(context).size;
     final _textTheme = Theme.of(context).textTheme;
     return InkWell(
+      hoverColor: Colors.indigo.withOpacity(0.06),
       onTap: onTap,
       child: Container(
         height: _size.height * 0.13,
