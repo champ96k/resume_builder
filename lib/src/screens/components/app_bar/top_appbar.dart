@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../core/constants/constant_colors.dart';
+
 import '../../../../core/theme/style.dart';
+import '../../../../gen/colors.gen.dart';
 
 class TopAppBar extends StatelessWidget {
   const TopAppBar({Key? key}) : super(key: key);
@@ -13,7 +14,6 @@ class TopAppBar extends StatelessWidget {
       height: size.height * 0.1,
       width: size.width,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5.0),
         color: Colors.white,
         boxShadow: [
           const BoxShadow(
@@ -28,9 +28,9 @@ class TopAppBar extends StatelessWidget {
         children: [
           SizedBox(width: _constSpacing),
           InkWell(
-            hoverColor: ConstantColors.primaryIndigo,
+            hoverColor: ColorName.primaryIndigo,
             onTap: () {},
-            child: const Text("Free resume builder"),
+            child: const Text("Free Resume Builder"),
           ),
           const Spacer(),
           SizedBox(width: _constSpacing),
@@ -40,13 +40,13 @@ class TopAppBar extends StatelessWidget {
           ),
           SizedBox(width: _constSpacing),
           InkWell(
-            hoverColor: ConstantColors.primaryIndigo,
+            hoverColor: ColorName.primaryIndigo,
             onTap: () {},
             child: const Text("Templates"),
           ),
           SizedBox(width: _constSpacing),
           InkWell(
-            hoverColor: ConstantColors.primaryIndigo,
+            hoverColor: ColorName.primaryIndigo,
             onTap: () {},
             child: const Text("About Us"),
           ),

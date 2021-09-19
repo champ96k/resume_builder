@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/constant_colors.dart';
-import '../../../../core/constants/constants_images.dart';
+import '../../../../gen/assets.gen.dart';
+import '../../../../gen/colors.gen.dart';
 import '../../../widgets/primary_button.dart';
 
 class RightCoverBuilder extends StatelessWidget {
@@ -24,7 +24,7 @@ class RightCoverBuilder extends StatelessWidget {
               child: Image(
                 height: _size.height * 0.7,
                 fit: BoxFit.fitHeight,
-                image: const AssetImage(ConstantImages.resumeCoverImage),
+                image: Assets.images.resumeCover,
               ),
             ),
           ),
@@ -61,7 +61,7 @@ class RightCoverBuilder extends StatelessWidget {
                         width: _size.width * 0.12,
                         title: "Build My Resume",
                         textColor: Colors.white,
-                        backgroundColor: ConstantColors.primaryIndigo,
+                        backgroundColor: ColorName.primaryIndigo,
                         onTap: () {},
                       ),
                       SizedBox(width: _size.width * 0.025),
@@ -69,8 +69,8 @@ class RightCoverBuilder extends StatelessWidget {
                         width: _size.width * 0.12,
                         title: "Resume example",
                         backgroundColor: Colors.transparent,
-                        borderColor: ConstantColors.primaryIndigo,
-                        textColor: ConstantColors.primaryIndigo,
+                        borderColor: ColorName.primaryIndigo,
+                        textColor: ColorName.primaryIndigo,
                         onTap: () {},
                       ),
                     ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../constants/constant_colors.dart';
+
+import '../../gen/colors.gen.dart';
 
 ///
 /// `AVOID defining a class that contains only static members`.
@@ -10,11 +11,11 @@ import '../constants/constant_colors.dart';
 ///
 
 final ButtonStyle outlineButtonStyle = OutlinedButton.styleFrom(
-  primary: ConstantColors.primaryIndigo,
-  shadowColor: ConstantColors.primaryIndigo,
+  primary: ColorName.primaryIndigo,
+  shadowColor: ColorName.primaryIndigo,
   padding: const EdgeInsets.all(16.0),
   textStyle: const TextStyle(
-    color: ConstantColors.primaryIndigo,
+    color: ColorName.primaryIndigo,
   ),
   minimumSize: const Size(88, 36),
   shape: const RoundedRectangleBorder(
@@ -26,12 +27,12 @@ final ButtonStyle outlineButtonStyle = OutlinedButton.styleFrom(
       if (states.contains(MaterialState.pressed)) {
         return const BorderSide(
           width: 1.0,
-          color: ConstantColors.primaryIndigo,
+          color: ColorName.primaryIndigo,
         );
       }
       return BorderSide(
         width: 1.0,
-        color: ConstantColors.primaryIndigo.withOpacity(0.7),
+        color: ColorName.primaryIndigo.withOpacity(0.7),
       );
     },
   ),

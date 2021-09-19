@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../core/constants/constants_images.dart';
+import '../../../../gen/assets.gen.dart';
+
 import 'widget/build_contain_widget.dart';
 
 class WhyBuildMyResume extends StatelessWidget {
@@ -35,20 +36,20 @@ class WhyBuildMyResume extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const BuildContainWidget(
-                  image: ConstantImages.freeIcon,
+                BuildContainWidget(
+                  image: Assets.images.icons.freeIcon,
                   subTitle:
                       """No gimmicks, no freemium features, no joke. Get everything you need to build a professional resume that shows off your best qualities to help you land your next job.""",
                   title: "We’re actually free",
                 ),
-                const BuildContainWidget(
-                  image: ConstantImages.templateIcon,
+                BuildContainWidget(
+                  image: Assets.images.icons.templatesIcon,
                   subTitle:
                       """Rest assured that the templates you find on Resume.com are the best around. Based on data from what employers want to see in candidates, we’ve created our templates with hiring in mind.""",
                   title: "Data-Driven Templates",
                 ),
-                const BuildContainWidget(
-                  image: ConstantImages.scanIcon,
+                BuildContainWidget(
+                  image: Assets.images.icons.scanIcon,
                   subTitle:
                       """With your resume ready for top employers, easily share with millions of interested employers on Indeed, the world’s #1 job site.""",
                   title: "Get Seen",

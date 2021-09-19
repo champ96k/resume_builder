@@ -10,8 +10,9 @@ analyzer:
     missing_required_param: warning
     # treat missing returns as a warning (not a hint)
     missing_return: warning
+    omit_local_variable_types: false
 
 linter:
   rules:
     public_member_api_docs: false
-    prefer_const_constructors: true
+    prefer_const_constructors: false

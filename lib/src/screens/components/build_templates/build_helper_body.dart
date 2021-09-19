@@ -46,8 +46,7 @@ class _BuildHelperBodyState extends State<BuildHelperBody> {
                   Expanded(
                     child: Container(
                       child: Image(
-                        image: AssetImage(
-                            ConstantImages.coverImages[_currentIndex]),
+                        image: coverImages[_currentIndex],
                       ),
                     ),
                   ),

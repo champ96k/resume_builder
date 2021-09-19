@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../../../gen/colors.gen.dart';
 
-import '../../../../core/constants/constant_colors.dart';
 import '../../../widgets/primary_button.dart';
 
 class BuildBrandingTile extends StatelessWidget {
@@ -27,13 +27,13 @@ class BuildBrandingTile extends StatelessWidget {
           ),
           PrimaryButton(
             title: "Build My Resume",
-            textColor: ConstantColors.primaryIndigo,
+            textColor: ColorName.primaryIndigo,
             backgroundColor: Colors.white,
             onTap: () {},
           )
         ],
       ),
-      color: ConstantColors.primaryIndigo,
+      color: ColorName.primaryIndigo,
     );
   }
 }

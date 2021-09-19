@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
+import 'core/app_configs/route_generator.dart';
 import 'core/app_configs/service_locator.dart';
-import 'src/screens/pages/home_screen.dart';
+import 'src/screens/pages/edit_resume_screen.dart';
 
 void main() {
   serviceLoactor();
@@ -15,9 +17,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      onGenerateRoute: routeGenerate,
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: const EditResumeScreen(),
     );
   }
 }

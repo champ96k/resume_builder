@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="primaryDarkBlue">#1C203A</color>
+    <color name="primaryIndigo">#440DCC</color>
+    <color name="secondaryIndigo">#21277F</color>
+    <color name="golden">#FFD159</color>
+</resources>

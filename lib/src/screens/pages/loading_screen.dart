@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../core/constants/constant_colors.dart';
+import '../../../../gen/colors.gen.dart';
 
 class LoadingScreen extends StatelessWidget {
   final String loadingText;
@@ -7,7 +7,7 @@ class LoadingScreen extends StatelessWidget {
   const LoadingScreen(
       {Key? key,
       this.loadingText = "Loading",
-      this.circularProgressIndicatorColor = ConstantColors.primaryDarkBlue})
+      this.circularProgressIndicatorColor = ColorName.primaryDarkBlue})
       : super(key: key);
 
   @override
