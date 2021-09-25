@@ -13,10 +13,10 @@ class EditScreenAppBar extends StatelessWidget {
     return Container(
       height: _size.height * 0.1,
       width: _size.width,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: ColorName.primaryDarkBlue,
         boxShadow: [
-          const BoxShadow(
+          BoxShadow(
             color: Colors.grey,
             offset: Offset(0.0, 1.0), //(x,y)
             blurRadius: 6.0,

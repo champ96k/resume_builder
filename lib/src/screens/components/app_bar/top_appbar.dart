@@ -12,10 +12,10 @@ class TopAppBar extends StatelessWidget {
     return Container(
       height: size.height * 0.1,
       width: size.width,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
-          const BoxShadow(
+          BoxShadow(
             color: Colors.grey,
             offset: Offset(0.0, 1.0), //(x,y)
             blurRadius: 6.0,

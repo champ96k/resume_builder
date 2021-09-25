@@ -7,11 +7,11 @@ Route<dynamic> routeGenerate(RouteSettings settings) {
   switch (settings.name) {
     case ScreenNames.homeScreen:
       return MaterialPageRoute(
-        builder: (context) => HomeScreen(),
+        builder: (context) => const HomeScreen(),
       );
     default:
       return MaterialPageRoute(
-        builder: (context) => HomeScreen(),
+        builder: (context) => const HomeScreen(),
       );
   }
 }
