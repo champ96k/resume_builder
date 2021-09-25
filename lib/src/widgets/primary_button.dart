@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/constant_colors.dart';
+import 'package:resume_builder/gen/colors.gen.dart';
 
 class PrimaryButton extends StatelessWidget {
   final double? height;
@@ -25,7 +25,7 @@ class PrimaryButton extends StatelessWidget {
     this.radius = 0.0,
     this.borderColor = Colors.transparent,
     this.textColor = Colors.white,
-    this.backgroundColor = ConstantColors.primaryIndigo,
+    this.backgroundColor = ColorName.primaryIndigo,
     this.fontSize = 16.0,
     this.fontWeight = FontWeight.w500,
   }) : super(key: key);

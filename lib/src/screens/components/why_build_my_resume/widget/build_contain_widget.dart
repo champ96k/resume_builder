@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BuildContainWidget extends StatelessWidget {
-  final String image;
+  final ImageProvider<Object> image;
   final String title;
   final String subTitle;
 
@@ -28,7 +28,7 @@ class BuildContainWidget extends StatelessWidget {
             Image(
               height: _size.height * 0.06,
               fit: BoxFit.cover,
-              image: AssetImage(image),
+              image: image,
             ),
             SizedBox(height: constSpacing),
             Text(

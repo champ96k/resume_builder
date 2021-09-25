@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../../../../core/constants/constant_colors.dart';
-import '../../../../core/constants/constants_images.dart';
-import '../../../widgets/primary_button.dart';
+import 'package:resume_builder/gen/assets.gen.dart';
+import 'package:resume_builder/gen/colors.gen.dart';
+import 'package:resume_builder/src/widgets/primary_button.dart';
 
 class LeftCoverBuilder extends StatelessWidget {
   const LeftCoverBuilder({Key? key}) : super(key: key);
@@ -12,7 +11,7 @@ class LeftCoverBuilder extends StatelessWidget {
     final _size = MediaQuery.of(context).size;
     final _textTheme = Theme.of(context).textTheme;
     return Container(
-      color: ConstantColors.secondaryIndigo,
+      color: ColorName.secondaryIndigo,
       height: _size.height * 0.8,
       width: _size.width,
       alignment: Alignment.center,
@@ -30,7 +29,7 @@ class LeftCoverBuilder extends StatelessWidget {
                     """START BUILDING YOUR CAREER""",
                     textAlign: TextAlign.start,
                     style: _textTheme.subtitle2!.copyWith(
-                      color: ConstantColors.golden,
+                      color: ColorName.golden,
                       letterSpacing: 0.75,
                       wordSpacing: 0.75,
                       fontWeight: FontWeight.w600,
@@ -85,7 +84,7 @@ class LeftCoverBuilder extends StatelessWidget {
             child: Image(
               height: _size.height * 0.7,
               fit: BoxFit.fitHeight,
-              image: const AssetImage(ConstantImages.resumeCover2Image),
+              image: Assets.images.resumeCover2,
             ),
           ),
         ],

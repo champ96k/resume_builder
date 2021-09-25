@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../core/constants/constant_colors.dart';
-
-import '../../../../core/constants/constants_images.dart';
-import '../../../widgets/primary_button.dart';
+import 'package:resume_builder/gen/assets.gen.dart';
+import 'package:resume_builder/gen/colors.gen.dart';
+import 'package:resume_builder/src/widgets/primary_button.dart';
 
 class BuildHeader extends StatelessWidget {
   const BuildHeader({Key? key}) : super(key: key);
@@ -55,8 +54,8 @@ class BuildHeader extends StatelessWidget {
                         title: "Create New Resume",
                         onTap: () {},
                         backgroundColor: Colors.transparent,
-                        borderColor: ConstantColors.primaryIndigo,
-                        textColor: ConstantColors.primaryIndigo,
+                        borderColor: ColorName.primaryIndigo,
+                        textColor: ColorName.primaryIndigo,
                       ),
                     ],
                   ),
@@ -68,7 +67,7 @@ class BuildHeader extends StatelessWidget {
             child: Container(
               child: Image(
                 height: size.height * 0.9,
-                image: const AssetImage(ConstantImages.bannerImage),
+                image: Assets.images.banner,
               ),
             ),
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:resume_builder/core/constants/constants_images.dart';
 
-import '../../../../core/constants/constants_images.dart';
 import 'widget/image_builder.dart';
 
 class BuildHelperBody extends StatefulWidget {
@@ -46,8 +46,7 @@ class _BuildHelperBodyState extends State<BuildHelperBody> {
                   Expanded(
                     child: Container(
                       child: Image(
-                        image: AssetImage(
-                            ConstantImages.coverImages[_currentIndex]),
+                        image: coverImages[_currentIndex],
                       ),
                     ),
                   ),

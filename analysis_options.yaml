@@ -10,6 +10,8 @@ analyzer:
     missing_required_param: warning
     # treat missing returns as a warning (not a hint)
     missing_return: warning
+    omit_local_variable_types: true
+    prefer_relative_imports: false
 
 linter:
   rules:
