@@ -197,13 +197,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.7.1"
-  dashed_rect:
-    dependency: "direct main"
-    description:
-      name: dashed_rect
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.4"
   effective_dart:
     dependency: "direct dev"
     description:
