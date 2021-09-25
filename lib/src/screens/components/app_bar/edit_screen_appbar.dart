@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../gen/colors.gen.dart';
-import '../../../widgets/primary_button.dart';
+import 'package:resume_builder/gen/colors.gen.dart';
+import 'package:resume_builder/src/widgets/primary_button.dart';
 
 class EditScreenAppBar extends StatelessWidget {
   const EditScreenAppBar({Key? key}) : super(key: key);

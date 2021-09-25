@@ -11,6 +11,7 @@ analyzer:
     # treat missing returns as a warning (not a hint)
     missing_return: warning
     omit_local_variable_types: false
+    prefer_relative_imports: false
 
 linter:
   rules:

@@ -1,4 +1,4 @@
-import '../../gen/assets.gen.dart';
+import 'package:resume_builder/gen/assets.gen.dart';
 
 final List<AssetGenImage> coverImages = [
   Assets.images.coverImage1,

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../gen/assets.gen.dart';
-
-import '../../../../gen/colors.gen.dart';
-import '../../../widgets/primary_button.dart';
+import 'package:resume_builder/gen/assets.gen.dart';
+import 'package:resume_builder/gen/colors.gen.dart';
+import 'package:resume_builder/src/widgets/primary_button.dart';
 
 class BuildHeader extends StatelessWidget {
   const BuildHeader({Key? key}) : super(key: key);

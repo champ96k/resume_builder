@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../gen/assets.gen.dart';
+import 'package:resume_builder/gen/assets.gen.dart';
 
 import 'widget/build_contain_widget.dart';
 

@@ -23,7 +23,10 @@ dependencies:
 
   #state management
   equatable: ^2.0.3
-  flutter_bloc: ^7.1.0
+  flutter_bloc: ^7.3.0
+
+  #Dash line
+  dashed_rect: ^0.0.4
 
   #database
   hive: ^2.0.4

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../../core/theme/style.dart';
-import '../../../../gen/colors.gen.dart';
+import 'package:resume_builder/core/app_theme/style.dart';
+import 'package:resume_builder/gen/colors.gen.dart';
 
 class TopAppBar extends StatelessWidget {
   const TopAppBar({Key? key}) : super(key: key);

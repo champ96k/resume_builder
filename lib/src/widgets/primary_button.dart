@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../gen/colors.gen.dart';
+import 'package:resume_builder/gen/colors.gen.dart';
 
 class PrimaryButton extends StatelessWidget {
   final double? height;

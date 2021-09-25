@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:resume_builder/src/screens/pages/home_screen.dart';
 
-import '../../src/screens/pages/home_screen.dart';
 import 'screen_names.dart';
 
 Route<dynamic> routeGenerate(RouteSettings settings) {
