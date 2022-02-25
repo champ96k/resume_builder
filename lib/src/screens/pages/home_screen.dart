@@ -20,29 +20,34 @@ class HomeScreen extends StatelessWidget {
         physics: const ScrollPhysics(),
         child: Column(
           children: [
-            //Appbar
+            ///[Appbar] header
             const TopAppBar(),
 
             ///cover screen
             const BuildHeader(),
 
-            ///Resume helper
+            ///Resume helper, show [feture of website]
             const BuildHelperBody(),
 
+            ///Build resume showcase title
             const BuildTemplatesTitle(),
 
-            //show Templates
+            ///List of [Resume] templates
             const ShowTemplates(),
 
+            ///`Why me` header and description
             const WhyBuildMyResume(),
 
+            ///Start building branding text
             const BuildBrandingTile(),
 
+            ///`try our resume` builder header
             const RightCoverBuilder(),
 
+            ///profesional resume for effective job interview
             const LeftCoverBuilder(),
 
-            //Footer
+            ///Footer
             const Footer(),
           ],
         ),

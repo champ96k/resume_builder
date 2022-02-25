@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:resume_builder/core/constants/constant_text.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import 'components/footer_text_builder.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -11,24 +16,42 @@ class Footer extends StatelessWidget {
       height: _size.height * 0.1,
       width: _size.width,
       alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: _size.width * 0.1),
       color: Colors.black,
-      child: Row(
-        children: [
-          Text(
-            "Copyrights © 2021 All Rights Reserved by Tushar Nikam.",
-            style: _textTheme.bodyText1!.copyWith(
-              color: Colors.white60,
-              letterSpacing: 0.75,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: _size.width * 0.04),
+        child: Row(
+          children: [
+            Text(
+              "Copyrights © 2021 All Rights Reserved by Tushar Nikam.",
+              style: _textTheme.bodyText1!.copyWith(
+                color: Colors.white60,
+                letterSpacing: 0.75,
+              ),
             ),
-          ),
-          const Spacer(),
-          _footerTextBuilder(_textTheme, _size, title: 'Twitter'),
-          _footerTextBuilder(_textTheme, _size, title: 'Send Us a Mail'),
-          _footerTextBuilder(_textTheme, _size, title: 'Privacy Policy'),
-          _footerTextBuilder(_textTheme, _size, title: 'About Us'),
-          _footerTextBuilder(_textTheme, _size, title: 'Affiliate'),
-        ],
+            const Spacer(),
+            _footerTextBuilder(_textTheme, _size, title: 'Privacy Policy'),
+            _footerTextBuilder(_textTheme, _size, title: 'About Us'),
+            _footerTextBuilder(_textTheme, _size, title: 'Affiliate'),
+            const Spacer(),
+            FooterTextBuilder(
+              title: "Follow Me",
+              children: List.generate(
+                socialLink.length,
+                (index) => InkWell(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 16.0, top: 6.0),
+                    child: FaIcon(
+                      socialLink[index].iconData,
+                      size: 16.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onTap: () => _launchURL(socialLink[index].socialURL),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -37,6 +60,7 @@ class Footer extends StatelessWidget {
     TextTheme _textTheme,
     Size _size, {
     required String title,
+    Function()? onTap,
   }) {
     return Row(
       children: [
@@ -44,7 +68,7 @@ class Footer extends StatelessWidget {
         InkWell(
           hoverColor: Colors.red,
           focusColor: Colors.red,
-          onTap: () {},
+          onTap: onTap,
           child: Text(
             title,
             style: _textTheme.bodyText1!.copyWith(
@@ -57,4 +81,8 @@ class Footer extends StatelessWidget {
       ],
     );
   }
+
+  void _launchURL(String _url) async => await canLaunch(_url)
+      ? await launch(_url)
+      : throw 'Could not launch $_url';
 }
