@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resume_builder/core/app_configs/screen_names.dart';
 
 class ShowTemplates extends StatelessWidget {
   const ShowTemplates({Key? key}) : super(key: key);
@@ -27,10 +28,14 @@ class ShowTemplates extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 30,
-                  width: 30,
-                  color: Colors.brown,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamed(ScreenNames.editResumeScreen);
+                  },
+                  child: Container(
+                    color: Colors.brown,
+                  ),
                 ),
               );
             },

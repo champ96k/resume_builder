@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resume_builder/core/app_configs/screen_names.dart';
 import 'package:resume_builder/gen/colors.gen.dart';
 import 'package:resume_builder/src/widgets/primary_button.dart';
 
@@ -29,7 +30,10 @@ class EditScreenAppBar extends StatelessWidget {
           SizedBox(width: _constSpacing),
           InkWell(
             hoverColor: ColorName.primaryIndigo,
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(ScreenNames.homeScreen);
+            },
             child: Text(
               "Free Resume Builder",
               style: _textTheme.headline6!.copyWith(

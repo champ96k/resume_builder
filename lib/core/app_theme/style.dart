@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../gen/colors.gen.dart';
+import 'package:resume_builder/gen/colors.gen.dart';
 
 ///
 /// `AVOID defining a class that contains only static members`.
