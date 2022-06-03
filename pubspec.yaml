@@ -39,14 +39,15 @@ dependencies:
 
   # url_launcher
   url_launcher: ^6.0.12
+  url_launcher_web: ^2.0.11
 
   #icon
   font_awesome_flutter: ^9.2.0
 
   dashed_rect: ^0.0.4
 
-dependency_overrides:
-  url_launcher_web: 2.0.6
+  #RXDart
+  rxdart: ^0.27.4
 
 dev_dependencies:
   flutter_test:

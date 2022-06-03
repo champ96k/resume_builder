@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:resume_builder/core/cubit/edit_screen_cubit.dart';
 import 'package:resume_builder/src/screens/pages/edit_resume_screen.dart';
 import 'package:resume_builder/src/screens/pages/home_screen.dart';
 
@@ -13,7 +15,12 @@ Route<dynamic> routeGenerate(RouteSettings settings) {
 
     case ScreenNames.editResumeScreen:
       return MaterialPageRoute(
-        builder: (context) => const EditResumeScreen(),
+        builder: (context) {
+          return BlocProvider<EditscreenCubit>(
+            create: (context) => EditscreenCubit(),
+            child: const EditResumeScreen(),
+          );
+        },
       );
 
     default:

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:resume_builder/core/enum/templates_enum.dart';
 import 'package:resume_builder/src/screens/components/template_view/widget/resume_view.dart';
 
 class TemplateView extends StatelessWidget {
-  final TEMPLATES? templates;
-  const TemplateView({Key? key, this.templates}) : super(key: key);
+  const TemplateView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
