@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
-ThemeData lightTheme(BuildContext context) => ThemeData(
-      primarySwatch: Colors.indigo,
-      brightness: Brightness.light,
-    );
+class MyTheme {
+  MyTheme._();
 
-ThemeData darkTheme(BuildContext context) => ThemeData(
-      brightness: Brightness.dark,
-    );
+  static ThemeData lightTheme(BuildContext context) => ThemeData(
+        primarySwatch: Colors.indigo,
+        brightness: Brightness.light,
+      );
+
+  static ThemeData darkTheme(BuildContext context) => ThemeData(
+        brightness: Brightness.dark,
+      );
+}

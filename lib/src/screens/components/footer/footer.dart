@@ -40,17 +40,18 @@ class Footer extends StatelessWidget {
             FooterTextBuilder(
               title: FooterConstant.followMe,
               children: List.generate(
-                socialLink.length,
+                Constants.socialLink.length,
                 (index) => InkWell(
                   child: Padding(
                     padding: const EdgeInsets.only(right: 16.0, top: 6.0),
                     child: FaIcon(
-                      socialLink[index].iconData,
+                      Constants.socialLink[index].iconData,
                       size: 16.0,
                       color: Colors.white,
                     ),
                   ),
-                  onTap: () => _launchURL(socialLink[index].socialURL),
+                  onTap: () =>
+                      _launchURL(Constants.socialLink[index].socialURL),
                 ),
               ),
             ),

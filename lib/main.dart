@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:resume_builder/src/screens/pages/home_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:resume_builder/core/cubit/resume_cubit.dart';
 
 import 'core/app_configs/route_generator.dart';
 import 'core/app_configs/service_locator.dart';
+import 'src/screens/pages/edit_resume_screen.dart';
 
 void main() {
   serviceLoactor();
@@ -17,10 +19,13 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      onGenerateRoute: routeGenerate,
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+    return BlocProvider<ResumeCubit>(
+      create: (context) => ResumeCubit(),
+      child: const MaterialApp(
+        onGenerateRoute: RouteGenerator.generator,
+        debugShowCheckedModeBanner: false,
+        home: EditResumeScreen(),
+      ),
     );
   }
 }

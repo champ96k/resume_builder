@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:resume_builder/core/enum/templates_enum.dart';
-import 'widget/empty_action.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:resume_builder/core/cubit/resume_cubit.dart';
 
-class ActionWindos extends StatelessWidget {
-  final TEMPLATES? templates;
-  const ActionWindos({Key? key, this.templates}) : super(key: key);
+class ActionWindos extends StatefulWidget {
+  const ActionWindos({
+    Key? key,
+  }) : super(key: key);
 
+  @override
+  State<ActionWindos> createState() => _ActionWindosState();
+}
+
+class _ActionWindosState extends State<ActionWindos> {
   @override
   Widget build(BuildContext context) {
     final _size = MediaQuery.of(context).size;
+    final _cubit = context.read<ResumeCubit>();
     return Expanded(
       child: Container(
         margin: EdgeInsets.symmetric(
@@ -20,7 +27,17 @@ class ActionWindos extends StatelessWidget {
           children: [
             const Text("Action Window"),
             SizedBox(height: _size.height * 0.03),
-            const EmptyAction(),
+            // const EmptyAction(),
+
+            TextFormField(
+              controller: _cubit.controller,
+              onChanged: (value) {
+                _cubit.setResumeModel(
+                  handler: _cubit.getHandler,
+                  value: value,
+                );
+              },
+            ),
           ],
         ),
       ),
