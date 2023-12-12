@@ -6,5 +6,5 @@ class FooterConstant {
   static const followMe = 'Follow me';
 
   static const copyrightsText =
-      """Copyrights © 2022 All Rights Reserved by Tushar Nikam.""";
+      """Copyrights © 2024 All Rights Reserved by Tushar Nikam.""";
 }

@@ -50,7 +50,7 @@ class Footer extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  onTap: () => _launchURL(socialLink[index].socialURL),
+                  onTap: () => _launchUrl(socialLink[index].socialURL),
                 ),
               ),
             ),
@@ -86,7 +86,9 @@ class Footer extends StatelessWidget {
     );
   }
 
-  void _launchURL(String _url) async => await canLaunchUrl(Uri.parse(_url))
-      ? await canLaunchUrl(Uri.parse(_url))
-      : throw 'Could not launch $_url';
+  Future<void> _launchUrl(String _url) async {
+    if (!await launchUrl(Uri.parse(_url))) {
+      throw Exception('Could not launch $_url');
+    }
+  }
 }
