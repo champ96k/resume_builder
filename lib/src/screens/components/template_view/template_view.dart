@@ -17,11 +17,11 @@ class TemplateView extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [
-                const Text("Template View"),
-                const Spacer(),
-                const Text("No. of Page: 1"),
+                Text("Template View"),
+                Spacer(),
+                Text("No. of Page: 1"),
               ],
             ),
             SizedBox(height: _size.height * 0.03),

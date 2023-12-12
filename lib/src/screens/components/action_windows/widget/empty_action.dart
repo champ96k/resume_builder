@@ -19,7 +19,7 @@ class EmptyAction extends StatelessWidget {
         child: Text(
           'Click edit button of any\nblock in the template.',
           textAlign: TextAlign.center,
-          style: _textTheme.headline6!.copyWith(
+          style: _textTheme.titleLarge?.copyWith(
             color: Colors.grey.withOpacity(0.4),
             letterSpacing: 4.75,
           ),

@@ -19,7 +19,7 @@ class BuildBrandingTile extends StatelessWidget {
           Text(
             "Start building your resume today,\nland your dream job tomorrow",
             textAlign: TextAlign.center,
-            style: _textTheme.headline2!.copyWith(
+            style: _textTheme.displayMedium!.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.w600,
             ),

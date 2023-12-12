@@ -33,7 +33,7 @@ class BuildContainWidget extends StatelessWidget {
             SizedBox(height: constSpacing),
             Text(
               title,
-              style: _textTheme.headline6!.copyWith(
+              style: _textTheme.titleLarge!.copyWith(
                 color: Colors.black,
                 fontWeight: FontWeight.w600,
               ),
@@ -41,7 +41,7 @@ class BuildContainWidget extends StatelessWidget {
             SizedBox(height: constSpacing),
             Text(
               subTitle,
-              style: _textTheme.subtitle1!.copyWith(
+              style: _textTheme.titleMedium!.copyWith(
                 color: Colors.black,
               ),
             ),

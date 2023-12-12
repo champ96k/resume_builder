@@ -36,7 +36,7 @@ class EditScreenAppBar extends StatelessWidget {
             },
             child: Text(
               "Free Resume Builder",
-              style: _textTheme.headline6!.copyWith(
+              style: _textTheme.titleLarge?.copyWith(
                 color: Colors.white,
                 letterSpacing: 3.0,
               ),

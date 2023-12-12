@@ -19,7 +19,7 @@ List<FooterSocailModel> socialLink = [
     socialURL: 'https://champ96k.github.io/',
   ),
   FooterSocailModel(
-    iconData: FontAwesomeIcons.coffee,
+    iconData: FontAwesomeIcons.mugSaucer,
     socialURL: 'https://www.buymeacoffee.com/champ96k',
   ),
 ];

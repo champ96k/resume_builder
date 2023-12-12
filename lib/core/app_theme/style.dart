@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:resume_builder/gen/colors.gen.dart';
 
-///
-/// `AVOID defining a class that contains only static members`.
-/// Creating classes with the sole purpose of providing utility or
-/// otherwise static methods is discouraged. Dart allows functions
-/// to exist outside of classes for this very reason
-/// `https://dart-lang.github.io/linter/lints/avoid_classes_with_only_static_members.html`
-///
-
 final ButtonStyle outlineButtonStyle = OutlinedButton.styleFrom(
-  primary: ColorName.primaryIndigo,
+  foregroundColor: ColorName.primaryIndigo,
   shadowColor: ColorName.primaryIndigo,
   padding: const EdgeInsets.all(16.0),
   textStyle: const TextStyle(

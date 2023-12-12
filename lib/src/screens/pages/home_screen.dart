@@ -15,40 +15,40 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
-        physics: const ScrollPhysics(),
+        physics: ScrollPhysics(),
         child: Column(
           children: [
             ///[Appbar] header
-            const TopAppBar(),
+            TopAppBar(),
 
             ///cover screen
-            const BuildHeader(),
+            BuildHeader(),
 
             ///Resume helper, show [feture of website]
-            const BuildHelperBody(),
+            BuildHelperBody(),
 
             ///Build resume showcase title
-            const BuildTemplatesTitle(),
+            BuildTemplatesTitle(),
 
             ///List of [Resume] templates
-            const ShowTemplates(),
+            ShowTemplates(),
 
             ///`Why me` header and description
-            const WhyBuildMyResume(),
+            WhyBuildMyResume(),
 
             ///Start building branding text
-            const BuildBrandingTile(),
+            BuildBrandingTile(),
 
             ///`try our resume` builder header
-            const RightCoverBuilder(),
+            RightCoverBuilder(),
 
             ///profesional resume for effective job interview
-            const LeftCoverBuilder(),
+            LeftCoverBuilder(),
 
             ///Footer
-            const Footer(),
+            Footer(),
           ],
         ),
       ),

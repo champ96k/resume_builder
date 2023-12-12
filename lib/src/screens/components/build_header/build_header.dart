@@ -26,7 +26,7 @@ class BuildHeader extends StatelessWidget {
                 children: [
                   Text(
                     "Build a professional resume for free",
-                    style: _textTheme.headline2!.copyWith(
+                    style: _textTheme.displayMedium!.copyWith(
                       color: Colors.black,
                       fontWeight: FontWeight.w600,
                     ),
@@ -34,7 +34,7 @@ class BuildHeader extends StatelessWidget {
                   SizedBox(height: _constSpacing),
                   Text(
                     """Create your resume easily with our free builder\nand professional templates""",
-                    style: _textTheme.headline6!.copyWith(
+                    style: _textTheme.titleLarge!.copyWith(
                       color: Colors.black87,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.75,

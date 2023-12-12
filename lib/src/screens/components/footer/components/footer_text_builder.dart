@@ -17,7 +17,7 @@ class FooterTextBuilder extends StatelessWidget {
       children: [
         Text(
           title,
-          style: _textTheme.bodyText1!.copyWith(
+          style: _textTheme.bodyLarge!.copyWith(
             color: Colors.white60,
             letterSpacing: 1.75,
           ),

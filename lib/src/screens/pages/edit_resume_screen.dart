@@ -10,24 +10,24 @@ class EditResumeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
-        physics: const ScrollPhysics(),
+        physics: ScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const EditScreenAppBar(),
+            EditScreenAppBar(),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const ActionWindos(
+                ActionWindos(
                   templates: TEMPLATES.five,
                 ),
-                const TemplateView(),
+                TemplateView(),
               ],
             ),
             //footer
-            const Footer(),
+            Footer(),
           ],
         ),
       ),

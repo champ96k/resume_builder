@@ -31,7 +31,7 @@ class _BuildHelperBodyState extends State<BuildHelperBody> {
               child: Text(
                 """Land your dream job with the help\nof our resume builder""",
                 textAlign: TextAlign.center,
-                style: _textTheme.headline3!.copyWith(
+                style: _textTheme.displaySmall!.copyWith(
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                 ),

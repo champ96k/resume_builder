@@ -33,7 +33,7 @@ class ImageBuilder extends StatelessWidget {
               visible ? Colors.indigo.withOpacity(0.06) : Colors.transparent,
           title: Text(
             title,
-            style: _textTheme.headline5!.copyWith(
+            style: _textTheme.headlineSmall?.copyWith(
               color: Colors.black,
               fontWeight: FontWeight.w600,
             ),
@@ -43,7 +43,7 @@ class ImageBuilder extends StatelessWidget {
             visible: visible,
             child: Text(
               subTitle,
-              style: _textTheme.subtitle2,
+              style: _textTheme.titleSmall,
             ),
           ),
         ),

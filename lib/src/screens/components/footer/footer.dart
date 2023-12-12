@@ -24,7 +24,7 @@ class Footer extends StatelessWidget {
           children: [
             Text(
               FooterConstant.copyrightsText,
-              style: _textTheme.bodyText1!.copyWith(
+              style: _textTheme.bodyLarge!.copyWith(
                 color: Colors.white60,
                 letterSpacing: 0.75,
               ),
@@ -75,7 +75,7 @@ class Footer extends StatelessWidget {
           onTap: onTap,
           child: Text(
             title,
-            style: _textTheme.bodyText1!.copyWith(
+            style: _textTheme.bodyLarge!.copyWith(
               color: Colors.white60,
               letterSpacing: 1.75,
             ),
@@ -86,7 +86,7 @@ class Footer extends StatelessWidget {
     );
   }
 
-  void _launchURL(String _url) async => await canLaunch(_url)
-      ? await launch(_url)
+  void _launchURL(String _url) async => await canLaunchUrl(Uri.parse(_url))
+      ? await canLaunchUrl(Uri.parse(_url))
       : throw 'Could not launch $_url';
 }

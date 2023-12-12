@@ -28,7 +28,7 @@ class LeftCoverBuilder extends StatelessWidget {
                   Text(
                     """START BUILDING YOUR CAREER""",
                     textAlign: TextAlign.start,
-                    style: _textTheme.subtitle2!.copyWith(
+                    style: _textTheme.titleSmall?.copyWith(
                       color: ColorName.golden,
                       letterSpacing: 0.75,
                       wordSpacing: 0.75,
@@ -39,7 +39,7 @@ class LeftCoverBuilder extends StatelessWidget {
                   Text(
                     """Professional resumes\nfor effective job\ninterviews""",
                     textAlign: TextAlign.start,
-                    style: _textTheme.headline3!.copyWith(
+                    style: _textTheme.displaySmall!.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                     ),
@@ -48,7 +48,7 @@ class LeftCoverBuilder extends StatelessWidget {
                   Text(
                     """A great job application leads to a good interview. An\namazing resume is what makes it all possible. Start off strong\nwith the hiring manager by creating a positive professional\nimage. A job interview can be much easier if they have a\nfavorable view of your CV and cover letter.""",
                     textAlign: TextAlign.start,
-                    style: _textTheme.subtitle1!.copyWith(
+                    style: _textTheme.titleMedium?.copyWith(
                       color: Colors.white,
                       wordSpacing: 0.75,
                     ),
